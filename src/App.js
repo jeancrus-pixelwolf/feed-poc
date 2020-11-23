@@ -11,30 +11,11 @@ import {
   CommentItem,
   LikeButton,
   ActivityFooter,
-  NotificationFeed,
-  Notification,
   Dropdown,
   Link,
-  EmojiPicker,
 } from "react-activity-feed";
 import GlobalStyle from "./styles/global";
 import "react-activity-feed/dist/index.es.css";
-
-const Header = () => (
-  <p style={{ margin: 0, padding: 0, backgroundColor: "green" }}>Header</p>
-);
-
-const Footer = () => (
-  <p style={{ margin: 0, padding: 0, backgroundColor: "green" }}>Footer</p>
-);
-
-const Icon = () => (
-  <img
-    src="https://lh3.googleusercontent.com/S0wT3WlK6_Y8nKy71NEhfC57nPbLxTZkjox02PArpgZReRZ0RHPZ7ms2f8pIgTrcSAWH"
-    style={{ width: "30px", height: "30px" }}
-    alt=""
-  />
-);
 
 function App() {
   const containerRef = useRef(null);
@@ -82,15 +63,7 @@ function App() {
           notify
           options={{ reactions: { recent: true }, withRecentReactions: true }}
         ></FlatFeed>
-        {/* <NotificationFeed
-          Group={(props) => (
-            <Notification
-              {...props}
-              onClickUser={(user) => console.log(user)}
-              onClickNotification={(notification) => console.log(notification)}
-            />
-          )}
-        /> */}
+
         <StatusUpdateForm feedGroup="timeline_aggregated" />
         <FlatFeed
           // feedGroup="user" // or timeline
